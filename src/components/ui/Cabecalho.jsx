@@ -6,18 +6,20 @@ export default function Cabecalho() {
   return (
     <>
       <StyledHeader>
-        <h1>
-          <Link href="/">
-            <Image
-              src="/images/logo.png"
-              width={48}
-              height={48}
-              alt="Patinha dentro de um coração"
-            />
-            PetShop
-          </Link>
-        </h1>
-        <Menu />
+        <div className="limitador">
+          <h1>
+            <Link href="/">
+              <Image
+                src="/images/logo.png"
+                width={48}
+                height={48}
+                alt="Patinha dentro de um coração"
+              />
+              PetShop
+            </Link>
+          </h1>
+          <Menu />
+        </div>
       </StyledHeader>
     </>
   );
