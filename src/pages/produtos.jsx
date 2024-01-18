@@ -1,4 +1,5 @@
 import Head from "next/head";
+import styled from "styled-components";
 export default function Produtos() {
   return (
     <>
@@ -8,9 +9,15 @@ export default function Produtos() {
         <meta name="keywords" content="Ração, Brinquedos, Banho,Coleira" />
       </Head>
 
-      <section>
+      <StyledProdutos>
         <h2>Conheça nossos Produtos</h2>
-      </section>
+      </StyledProdutos>
     </>
   );
 }
+
+const StyledProdutos = styled.section`
+  h2::before {
+    content: "🎁";
+  }
+`;
