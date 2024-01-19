@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styled from "styled-components";
+import Link from "next/link";
 export default function Home() {
   return (
     <>
@@ -10,6 +11,35 @@ export default function Home() {
       </Head>
       <StyledHome>
         <h2>Pet Notícias</h2>
+        <StyledListaPosts>
+          <article>
+            <Link href="">
+              <h3>Título do post</h3>
+              <p>Subtitulo</p>
+            </Link>
+          </article>
+
+          <article>
+            <Link href="">
+              <h3>Título do post</h3>
+              <p>Subtitulo</p>
+            </Link>
+          </article>
+
+          <article>
+            <Link href="">
+              <h3>Título do post</h3>
+              <p>Subtitulo</p>
+            </Link>
+          </article>
+
+          <article>
+            <Link href="">
+              <h3>Título do post</h3>
+              <p>Subtitulo</p>
+            </Link>
+          </article>
+        </StyledListaPosts>
       </StyledHome>
     </>
   );
@@ -18,5 +48,40 @@ export default function Home() {
 const StyledHome = styled.section`
   h2::before {
     content: "📰";
+  }
+`;
+
+const StyledListaPosts = styled.div`
+  article {
+    background-color: #f7f7f7;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--borda-arredondada);
+    border-radius: var(--borda-arredondada);
+    transition: 200ms;
+
+    & a {
+      text-decoration: none;
+      color: black;
+
+      &:hover,
+      &:focus {
+        color: #0066ff;
+      }
+    }
+  }
+
+  article:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+
+  @media screen and (min-width: 500px) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    article {
+      width: 49%;
+    }
   }
 `;
