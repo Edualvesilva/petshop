@@ -1,6 +1,13 @@
 # PetShop: projeto Next.js
 
-## Branch 05
+## Branch 9-desafio-componentização
+
+- Crie na pasta `components` um component chamado `ListPost`
+- Mofifique a página para que ela utilize este componente.
+
+**Atenção** toda a lógica/programação feita em relação ao <StyledListaPosts> deve ser migrada para o novo componente, Exceto o `import` do `arrayPost` que deve continuar na página inicial.
+
+portanto, você deverá repassar o arrayPosts via props para o novo componente.
 
 ### IMPORTANTE!
 
