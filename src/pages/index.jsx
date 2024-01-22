@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
       <StyledHome>
         <h2>Pet Notícias</h2>
-        <ListaPost api={[{ id: 1, titulo: "teste", subtitulo: "Teste" }]} />
+        <ListaPost posts={[]} />
       </StyledHome>
     </>
   );

@@ -1,10 +1,15 @@
 import Link from "next/link";
 import styled from "styled-components";
 
-export default function ListaPost({ api }) {
+export default function ListaPost({ posts }) {
+  /* Se não houver posts (ou seja, posts está vazio/zerado) 
+  em vez de retornar com o map, return uma mensagem provisória
+  para o usuário.
+  */
+  if (posts.length === 0) return <h3>Ainda não há Posts!</h3>;
   return (
     <StyledListaPosts>
-      {api.map((post) => {
+      {posts.map((post) => {
         return (
           <article key={post.id}>
             <Link href="">
