@@ -6,7 +6,8 @@ export default function ListaPost({ posts }) {
   em vez de retornar com o map, return uma mensagem provisória
   para o usuário.
   */
-  if (posts.length === 0) return <h3>Ainda não há Posts!</h3>;
+  if (posts.length === 0)
+    return <h3 style={{ textAlign: "center" }}>Ainda não há Posts!</h3>;
   return (
     <StyledListaPosts>
       {posts.map((post) => {
