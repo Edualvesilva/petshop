@@ -1,5 +1,18 @@
 # PetShop: projeto Next.js
 
+## Branch 10-usando-json-server-como-fake-api
+
+### Etapas
+
+1. Instalação do `json-server` : `npm install -g json-server`
+2. Colocação do arquivo `db.json` na raíz do projeto (este arquivo funcionará como um banco de dados para a API)
+3. Pegar o IP da máquina usando `ipconfig`
+4. Adicionar um script npm no `package.json` com a seguinte configuração:
+
+`"api" : "json-server --host IP.DA.SUA.MAQUINA db.json --port NÚMERO"`
+
+5. Executar a API usando `npm run api`
+
 ## Branch 9-desafio-componentização
 
 - Crie na pasta `components` um component chamado `ListPost`
