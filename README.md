@@ -1,5 +1,14 @@
 # PetShop: projeto Next.js
 
+## Branch 11-desafio-consumindo-dados-usando-modo-react
+
+Desafio:
+Você precisará programar a página inicial (arquivo index) para que, através da API Fake, os dados dos posts sejam consumidos e carregados/repassados ao ListaPosts.
+
+Para isso, você precisa verificar qual é a URL do Endpoint da API e programar recursos utilizando useState e useEffect.
+No caso do useState, crie as constantes listaDePosts e setListaDePosts.
+No caso do useEffect, programe o necessário para usar a função fetch.
+
 ## Branch 10-usando-json-server-como-fake-api
 
 ### Etapas
