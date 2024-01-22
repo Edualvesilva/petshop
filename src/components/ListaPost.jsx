@@ -2,18 +2,20 @@ import Link from "next/link";
 import styled from "styled-components";
 
 export default function ListaPost({ api }) {
-  <StyledListaPosts>
-    {api.map((post) => {
-      return (
-        <article key={post.id}>
-          <Link href="">
-            <h3>{post.titulo}</h3>
-            <p>{post.subtitulo}</p>
-          </Link>
-        </article>
-      );
-    })}
-  </StyledListaPosts>;
+  return (
+    <StyledListaPosts>
+      {api.map((post) => {
+        return (
+          <article key={post.id}>
+            <Link href="">
+              <h3>{post.titulo}</h3>
+              <p>{post.subtitulo}</p>
+            </Link>
+          </article>
+        );
+      })}
+    </StyledListaPosts>
+  );
 }
 
 const StyledListaPosts = styled.div`
