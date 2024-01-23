@@ -13,6 +13,7 @@ export async function getStaticProps() {
       throw new Error(`Erro: ${resposta.staus} - ${resposta.statusText}`);
     }
 
+    /* Após o processamento (desde que não hajá erros), a getStaticProps retorna um objeto com uma Propriedade chamada "props", e nesta propriedade colocamos um objeto com as props que queremos usar. No caso, usamos uma prop "posts" (pode ter qualquer nome) e é nela que colocamos os dados. */
     return {
       props: {
         posts: dados,
