@@ -13,7 +13,7 @@ export default function ListaPost({ posts }) {
       {posts.map((post) => {
         return (
           <article key={post.id}>
-            <Link href="">
+            <Link href={`posts/${post.id}`}>
               <h3>{post.titulo}</h3>
               <p>{post.subtitulo}</p>
             </Link>
