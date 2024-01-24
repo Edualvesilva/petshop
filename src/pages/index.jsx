@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ListaPost from "@/components/ListaPost";
 import { useState } from "react";
 import serverApi from "./api/server";
+import { redirect } from "next/dist/server/api-utils";
 
 /* FUNÇÂO getStaticProps
 Utilizada para execução de código server-side (neste caso, fetch na API) com o objetivo de gerar props com os dados processados  */
@@ -22,6 +23,7 @@ export async function getStaticProps() {
     };
   } catch (error) {
     console.error("Deu ruim: " + error.message);
+    return { notFound: true };
   }
 }
 
