@@ -41,9 +41,7 @@ export default function Home({ posts, categorias }) {
     const categoriaSelecionada = event.currentTarget.innerText;
 
     const categoriaFiltrada = posts.filter((post) => {
-      return (
-        post.categoria === categoriaSelecionada || categoriaSelecionada === null
-      );
+      return post.categoria === categoriaSelecionada;
     });
     setListaPost(categoriaFiltrada);
   };
