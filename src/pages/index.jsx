@@ -38,7 +38,7 @@ export default function Home({ posts, categorias }) {
   const [ListaDePost, setListaPost] = useState(posts);
 
   const aplicarFiltro = (event) => {
-    const categoriaSelecionada = event.currentTarget.innerText;
+    const categoriaSelecionada = event.currentTarget.textContent;
 
     const categoriaFiltrada = posts.filter((post) => {
       return post.categoria === categoriaSelecionada;
@@ -86,6 +86,7 @@ const StyledCategorias = styled.div`
     font-size: 16px;
     text-align: center;
     text-decoration: none;
+    text-transform: capitalize;
     cursor: pointer;
     border: 2px solid #3498db;
     border-radius: 5px;
