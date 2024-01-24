@@ -36,7 +36,7 @@ export async function getStaticProps() {
 
 export default function Home({ posts, categorias }) {
   const [ListaDePost, setListaPost] = useState(posts);
-
+  const [filtroAtivo, setFiltroAtivo] = useState(false);
   const aplicarFiltro = (event) => {
     const categoriaSelecionada = event.currentTarget.textContent;
 
@@ -63,6 +63,7 @@ export default function Home({ posts, categorias }) {
               </button>
             );
           })}
+          {filtroAtivo && <button className="limpar">Limpar filtro</button>}
         </StyledCategorias>
         <ListaPost posts={ListaDePost} />
       </StyledHome>
@@ -98,5 +99,16 @@ const StyledCategorias = styled.div`
   button:hover {
     background-color: #2980b9;
     border-color: #2980b9;
+  }
+
+  .limpar {
+    background-color: gray;
+    border: gray;
+    &hover {
+      background-color: slategray;
+    }
+    &::before {
+      content: "🧹";
+    }
   }
 `;
