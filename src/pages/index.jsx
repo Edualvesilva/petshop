@@ -37,6 +37,16 @@ export async function getStaticProps() {
 export default function Home({ posts, categorias }) {
   const [ListaDePost, setListaPost] = useState(posts);
 
+  const aplicarFiltro = (event) => {
+    const categoriaSelecionada = event.currentTarget.innerText;
+
+    const categoriaFiltrada = posts.filter((post) => {
+      return (
+        post.categoria === categoriaSelecionada || categoriaSelecionada === null
+      );
+    });
+    setListaPost(categoriaFiltrada);
+  };
   return (
     <>
       <Head>
@@ -47,11 +57,15 @@ export default function Home({ posts, categorias }) {
       <StyledHome>
         <h2>Pet Notícias</h2>
 
-        <div>
+        <StyledCategorias>
           {categorias.map((categoria, indice) => {
-            return <button key={indice}>{categoria}</button>;
+            return (
+              <button onClick={aplicarFiltro} key={indice}>
+                {categoria}
+              </button>
+            );
           })}
-        </div>
+        </StyledCategorias>
         <ListaPost posts={ListaDePost} />
       </StyledHome>
     </>
@@ -61,5 +75,29 @@ export default function Home({ posts, categorias }) {
 const StyledHome = styled.section`
   h2::before {
     content: "📰";
+  }
+`;
+
+const StyledCategorias = styled.div`
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  button {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #3498db;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  button:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
   }
 `;
