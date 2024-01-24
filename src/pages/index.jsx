@@ -43,7 +43,18 @@ export default function Home({ posts, categorias }) {
     const categoriaFiltrada = posts.filter((post) => {
       return post.categoria === categoriaSelecionada;
     });
+
+    // Sinalizando o state como FiltroAtivo(true)
+    setFiltroAtivo(true);
     setListaPost(categoriaFiltrada);
+  };
+
+  const limparFiltro = () => {
+    // Sinalizando o state como filtro inativo (false)
+    setFiltroAtivo(false);
+
+    // Atualizando o state de listaDePost para os posts originais
+    setListaPost(posts);
   };
   return (
     <>
@@ -63,7 +74,13 @@ export default function Home({ posts, categorias }) {
               </button>
             );
           })}
-          {filtroAtivo && <button className="limpar">Limpar filtro</button>}
+
+          {/* Se filtroAtivo estiver ativo logo o botão não aparece */}
+          {filtroAtivo && (
+            <button onClick={limparFiltro} className="limpar">
+              Limpar filtro
+            </button>
+          )}
         </StyledCategorias>
         <ListaPost posts={ListaDePost} />
       </StyledHome>
