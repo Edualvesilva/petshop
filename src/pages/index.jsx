@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ListaPost from "@/components/ListaPost";
 import { useState } from "react";
 import serverApi from "./api/server";
+import ListaCategorias from "@/components/ListaCategorias";
 
 /* FUNÇÂO getStaticProps
 Utilizada para execução de código server-side (neste caso, fetch na API) com o objetivo de gerar props com os dados processados  */
@@ -73,27 +74,14 @@ export default function Home({ posts, categorias }) {
       </Head>
       <StyledHome>
         <h2>Pet Notícias</h2>
+        <ListaCategorias
+          categorias={categorias}
+          aplicarFiltro={aplicarFiltro}
+          categoriaAtiva={categoriaAtiva}
+          limparFiltro={limparFiltro}
+          filtroAtivo={filtroAtivo}
+        />
 
-        <StyledCategorias>
-          {categorias.map((categoria, indice) => {
-            return (
-              <button
-                className={categoria === categoriaAtiva ? "ativo" : ""}
-                onClick={aplicarFiltro}
-                key={indice}
-              >
-                {categoria}
-              </button>
-            );
-          })}
-
-          {/* Se filtroAtivo estiver ativo logo o botão não aparece */}
-          {filtroAtivo && (
-            <button onClick={limparFiltro} className="limpar">
-              Limpar filtro
-            </button>
-          )}
-        </StyledCategorias>
         <ListaPost posts={ListaDePost} />
       </StyledHome>
     </>
@@ -103,45 +91,5 @@ export default function Home({ posts, categorias }) {
 const StyledHome = styled.section`
   h2::before {
     content: "📰";
-  }
-`;
-
-const StyledCategorias = styled.div`
-  display: flex;
-  justify-content: space-between;
-  justify-items: center;
-  button {
-    display: inline-block;
-    padding: 5px 10px;
-    font-size: 16px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: capitalize;
-    cursor: pointer;
-    border: 2px solid #3498db;
-    border-radius: 5px;
-    color: #fff;
-    background-color: #3498db;
-    transition: background-color 0.3s, color 0.3s;
-
-    &.ativo {
-      background-color: var(--cor-primaria-fundo);
-    }
-  }
-
-  button:hover {
-    background-color: #2980b9;
-    border-color: #2980b9;
-  }
-
-  .limpar {
-    background-color: gray;
-    border: gray;
-    &:hover {
-      background-color: slategray;
-    }
-    &::before {
-      content: "🧹";
-    }
   }
 `;
