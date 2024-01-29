@@ -37,6 +37,8 @@ export async function getStaticProps() {
 export default function Home({ posts, categorias }) {
   const [ListaDePost, setListaPost] = useState(posts);
   const [filtroAtivo, setFiltroAtivo] = useState(false);
+  const [categoriaAtiva, setcategoriaAtiva] = useState("");
+
   const aplicarFiltro = (event) => {
     const categoriaSelecionada = event.currentTarget.textContent;
 
@@ -47,6 +49,9 @@ export default function Home({ posts, categorias }) {
     // Sinalizando o state como FiltroAtivo(true)
     setFiltroAtivo(true);
     setListaPost(categoriaFiltrada);
+
+    // Sinalizando o state com o texto/categoria escolhida
+    setcategoriaAtiva(categoriaSelecionada);
   };
 
   const limparFiltro = () => {
@@ -55,6 +60,9 @@ export default function Home({ posts, categorias }) {
 
     // Atualizando o state de listaDePost para os posts originais
     setListaPost(posts);
+
+    /* Atualizando o state da categoria ativa para vazio "" */
+    setcategoriaAtiva("");
   };
   return (
     <>
@@ -69,7 +77,11 @@ export default function Home({ posts, categorias }) {
         <StyledCategorias>
           {categorias.map((categoria, indice) => {
             return (
-              <button onClick={aplicarFiltro} key={indice}>
+              <button
+                className={categoria === categoriaAtiva ? "ativo" : ""}
+                onClick={aplicarFiltro}
+                key={indice}
+              >
                 {categoria}
               </button>
             );
@@ -111,6 +123,10 @@ const StyledCategorias = styled.div`
     color: #fff;
     background-color: #3498db;
     transition: background-color 0.3s, color 0.3s;
+
+    &.ativo {
+      background-color: var(--cor-primaria-fundo);
+    }
   }
 
   button:hover {
@@ -121,7 +137,7 @@ const StyledCategorias = styled.div`
   .limpar {
     background-color: gray;
     border: gray;
-    &hover {
+    &:hover {
       background-color: slategray;
     }
     &::before {
