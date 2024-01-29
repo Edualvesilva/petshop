@@ -1,5 +1,10 @@
 # PetShop: projeto Next.js
 
+## Branch 17-migração-api-fake-firebase-json
+
+link para Firebase:
+https://petshop-edu-default-rtdb.firebaseio.com/
+
 ## Branch 12-usando-rotas-dinâmicas-para-abrir-post
 
 ### Recursos necessários
