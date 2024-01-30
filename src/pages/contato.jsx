@@ -1,7 +1,13 @@
 import Head from "next/head";
 import styled from "styled-components";
 import Container from "@/components/ui/Container";
+import { useForm } from "react-hook-form";
 export default function Contato() {
+  const { register, handleSubmit } = useForm();
+
+  const enviarContato = () => {
+    console.log("Enviando dados....");
+  };
   return (
     <>
       <Head>
@@ -15,17 +21,23 @@ export default function Contato() {
           <form action="" method="post">
             <div>
               <label htmlFor="nome">Nome: </label>
-              <input type="text" name="nome" id="nome" />
+              <input {...register("nome")} type="text" name="nome" id="nome" />
             </div>
 
             <div>
               <label htmlFor="email">Email: </label>
-              <input type="email" name="email" id="email" />
+              <input
+                {...register("email")}
+                type="email"
+                name="email"
+                id="email"
+              />
             </div>
 
             <div>
               <label htmlFor="mensagem">Mensagem: </label>
               <textarea
+                {...register("mensagem")}
                 maxLength={500}
                 name="mensagem"
                 id="mensagem"
