@@ -11,7 +11,7 @@ No caso do PetSho, criamos um projeto Firebase e nele adicionamos um banco de da
 O RealTime Database é um banco de dados `NoSQL`, ou seja, um banco de dados **não-relacional**. Ele é baseado em documentos no formato JSON contendo objetos de dados.
 
 link para Firebase:
-https://petshop-edu-default-rtdb.firebaseio.com/
+https://firebase.google.com
 
 ## Branch 12-usando-rotas-dinâmicas-para-abrir-post
 
