@@ -31,7 +31,7 @@ function ListaCategorias({
 
 const StyledCategorias = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   button {
     display: inline-block;

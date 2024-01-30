@@ -32,10 +32,8 @@ export async function getStaticProps() {
       };
     });
 
-    console.log(arrayDePosts);
-
     /* Extraindo as categorias dos posts para um novo array */
-    const categorias = dados.map((post) => post.categoria);
+    const categorias = arrayDePosts.map((post) => post.categoria);
 
     /* Gerando uma array de categorias ÚNICAS */
     const categoriasUnicas = [...new Set(categorias)];
@@ -43,7 +41,7 @@ export async function getStaticProps() {
     /* Após o processamento (desde que não hajá erros), a getStaticProps retorna um objeto com uma Propriedade chamada "props", e nesta propriedade colocamos um objeto com as props que queremos usar. No caso, usamos uma prop "posts" (pode ter qualquer nome) e é nela que colocamos os dados. */
     return {
       props: {
-        posts: dados,
+        posts: arrayDePosts,
         categorias: categoriasUnicas, // Provisório
       },
     };
