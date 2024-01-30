@@ -2,6 +2,14 @@
 
 ## Branch 17-migração-api-fake-firebase-json
 
+### Firebase
+
+Firebase é uma plataforma de serviços web (Web Services) com uma série de funcionalidades de Back-end úteis para aplicações (web,apps,jogos).
+
+No caso do PetSho, criamos um projeto Firebase e nele adicionamos um banco de dados chamado "Firebase Realtime Database" para utilização como API JSON.
+
+O RealTime Database é um banco de dados `NoSQL`, ou seja, um banco de dados **não-relacional**. Ele é baseado em documentos no formato JSON contendo objetos de dados.
+
 link para Firebase:
 https://petshop-edu-default-rtdb.firebaseio.com/
 
