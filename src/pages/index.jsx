@@ -11,11 +11,28 @@ export async function getStaticProps() {
   try {
     const resposta = await fetch(`${serverApi}/posts.json`);
     const dados = await resposta.json();
-    console.log(dados);
 
     if (!resposta.ok) {
       throw new Error(`Erro: ${resposta.staus} - ${resposta.statusText}`);
     }
+
+    /* Colocando os dados dos objetos dentro de um array
+      1) Object.keys(dados): extrair as chaves/id de cada objeto para um array.
+    
+      2) Map no array chaves, em que retornamos um novo objeto.
+
+      3) Cada novo objeto (representado por post) é criado com os dados existentes (por isso usamos o spread)
+
+      4) No caso do id, atribuimos a própria chave de cada objeto
+    */
+    const arrayDePosts = Object.keys(dados).map((post) => {
+      return {
+        ...dados[post],
+        id: post,
+      };
+    });
+
+    console.log(arrayDePosts);
 
     /* Extraindo as categorias dos posts para um novo array */
     const categorias = dados.map((post) => post.categoria);
