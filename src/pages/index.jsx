@@ -9,8 +9,9 @@ import ListaCategorias from "@/components/ListaCategorias";
 Utilizada para execução de código server-side (neste caso, fetch na API) com o objetivo de gerar props com os dados processados  */
 export async function getStaticProps() {
   try {
-    const resposta = await fetch(`${serverApi}/posts`);
+    const resposta = await fetch(`${serverApi}/posts.json`);
     const dados = await resposta.json();
+    console.log(dados);
 
     if (!resposta.ok) {
       throw new Error(`Erro: ${resposta.staus} - ${resposta.statusText}`);
