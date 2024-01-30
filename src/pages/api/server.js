@@ -1,5 +1,3 @@
-const porta = 2112;
-const endereco = "10.20.46.38";
-const serverApi = `http://${endereco}:${porta}`;
+const serverApi = `https://petshop-edu-default-rtdb.firebaseio.com/posts/-NpKfZFzuNKpZ_ik6wGx`;
 
 export default serverApi;
