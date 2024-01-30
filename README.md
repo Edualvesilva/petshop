@@ -10,6 +10,16 @@ No caso do PetSho, criamos um projeto Firebase e nele adicionamos um banco de da
 
 O RealTime Database é um banco de dados `NoSQL`, ou seja, um banco de dados **não-relacional**. Ele é baseado em documentos no formato JSON contendo objetos de dados.
 
+### Lembrete sobre uso de APIs
+
+Como se trata de uma API JSON, podemos utilizar qualquer um dos verbos HTTP para consumo de APIs no padrão REST:
+
+- GET: ler,obter dados
+- POST: criar,inserir
+- PUT: atualizar tudo
+- PATCH: atualizar parcialmente
+- DELETE: excluir
+
 link para Firebase:
 https://firebase.google.com
 
