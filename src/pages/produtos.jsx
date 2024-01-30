@@ -16,30 +16,33 @@ export default function Produtos() {
           <article>
             <h3>Banho</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, quod
-              illum nam illo, earum temporibus possimus deserunt, totam delectus
-              similique iste asperiores impedit? Voluptatum, dignissimos quam?
-              Aspernatur perspiciatis quisquam repellendus.
+              Dar banho no seu pet é uma maneira importante de garantir a saúde
+              e o bem-estar do seu companheiro peludo. Comece molhando
+              suavemente o pelo do seu pet com água morna. Aplique o shampoo,
+              massageando delicadamente para criar uma espuma suave. Preste
+              atenção especial às áreas propensas a sujeira, como patas e
+              barriga
             </p>
           </article>
 
           <article>
             <h3>Castração</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, quod
-              illum nam illo, earum temporibus possimus deserunt, totam delectus
-              similique iste asperiores impedit? Voluptatum, dignissimos quam?
-              Aspernatur perspiciatis quisquam repellendus.
+              A castração é um procedimento veterinário com benefícios
+              significativos para a saúde e o comportamento dos animais de
+              estimação. Além de controlar a reprodução, a castração também
+              ajuda a prevenir certos problemas de saúde, como câncer de mama e
+              doenças uterinas em fêmeas, e problemas na próstata em machos.
             </p>
           </article>
 
           <article>
             <h3>Tosar</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, quod
-              illum nam illo, earum temporibus possimus deserunt, totam delectus
-              similique iste asperiores impedit? Voluptatum, dignissimos quam?
-              Aspernatur perspiciatis quisquam repellendus.
+              A tosa é um cuidado essencial para muitas raças de animais de
+              estimação, proporcionando benefícios tanto estéticos quanto de
+              saúde. O comprimento e o estilo da tosa podem variar de acordo com
+              a raça do pet, a estação do ano e as preferências dos tutores.
             </p>
           </article>
         </Container>
