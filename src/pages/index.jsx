@@ -89,7 +89,7 @@ export default function Home({ posts, categorias }) {
         <meta name="keywords" content="Site de pets, Cachorro,Gato" />
       </Head>
       <StyledHome>
-        <h2>Pet Notícias</h2>
+        <h2>Pet Notícias {ListaDePost.length}</h2>
         <ListaCategorias
           categorias={categorias}
           aplicarFiltro={aplicarFiltro}
