@@ -1,5 +1,9 @@
 # PetShop: projeto Next.js
 
+## Branch 19-transformando-o-app-next-em-pwa
+
+**PWA** significa **Progressive Web Application** (Aplicativo Web Progressivo). Trata-se de uma abordagem para desenvolvimento de aplicativos web que visa combinar caracterìsticas de sites e aplicativos móveis. As PWAS são construídas com tecnologias web tradicionais (HTML5,CSS e JAVASCRIPT) e oferecem uma experiência semelhante à de aplicativos nativos,podendo até mesmo serem instaladas no dispositivo mòvel.
+
 ## Branch 17-migração-api-fake-firebase-json
 
 ### Firebase
