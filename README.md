@@ -10,7 +10,7 @@
 
 Arquivo chamadp `manifest.json` com informações gerais sobre o aplicativo: nome,descrição,ícones,cores etc.
 
-no caso do Next.js, este arquivo deve ser colocado na pasta `public` e adicionando via `meta tag` na página `_document.js`.
+no caso do Next.js, este arquivo deve ser colocado na pasta `public` e adicionando via `link` na página `_document.js` dentro do `<head>`.
 
 2. Criar/Configurar um Service Worker (JavaScrpt)
 
